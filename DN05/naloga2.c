@@ -20,17 +20,17 @@ void zamenjaj(int** a, int** b) {
 }
 
 void uredi(int** a, int** b, int** c) {
-    if (*a > *b && *a > *c && *b > *c) {
+    if (**a > **b && **a > **c && **b > **c) {
         zamenjaj(a, c);
-    } else if (*a > *b && *a > *c && *c > *b) {
+    } else if (**a > **b && **a > **c && **c > **b) {
         zamenjaj(a, b);
         zamenjaj(b, c);
-    } else if (*b > *a && *b > *c && *a > *c) {
+    } else if (**b > **a && **b > **c && **a > **c) {
         zamenjaj(b, c);
         zamenjaj(a, b);
-    } else if (*b > *a && *b > *c && *c > *a) {
+    } else if (**b > **a && **b > **c && **c > **a) {
         zamenjaj(b, c);
-    } else if (*c > *a && *c > *b && *a > *b) {
+    } else if (**c > **a && **c > **b && **a > **b) {
         zamenjaj(a, b);
     }
 }
